@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Vintner & Spirit Pro 🍷
 
-# Run and deploy your AI Studio app
+A premium, modern liquor store management and Point of Sale (POS) system designed for high-end retailers. This application combines robust inventory management with cutting-edge AI features powered by Google Gemini.
 
-This contains everything you need to run your app locally.
+## ✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/16n8jyI6DWljoRoHJxuaSKY6StDrCT-TJ
+- **Point of Sale (POS):** A streamlined interface for rapid checkouts, featuring category filtering, real-time stock status, and an integrated cart system.
+- **AI Sommelier Concierge:** A Gemini-powered assistant that helps staff provide expert recommendations based on natural language customer queries (e.g., "I need a smoky scotch under $100").
+- **Smart Dashboard:** Real-time visualization of sales performance using Recharts, coupled with AI-driven inventory insights.
+- **AI Inventory Insights:** Automatically identifies low-stock risks, cross-selling opportunities, and market trends based on current inventory data.
+- **Inventory Management:** Full visibility into SKU tracking, stock levels, and pricing with a clean, searchable interface.
+- **Sales History:** Detailed logs of past transactions for auditing and performance review.
 
-## Run Locally
+## 🚀 Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend:** React 19, TypeScript
+- **Styling:** Tailwind CSS (Premium Dark Slate & Amber palette)
+- **Icons:** Lucide React
+- **Charts:** Recharts
+- **AI Engine:** Google Gemini 3 Flash (`@google/genai`)
 
+## 🤖 AI Integration
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The system leverages the `gemini-3-flash-preview` model for two core services:
+
+1.  **Inventory Analysis:** Processes the entire product list to generate structured JSON insights regarding business opportunities and alerts.
+2.  **Sommelier Concierge:** Uses a system prompt to transform technical inventory data into elegant, knowledgeable customer-facing recommendations.
+
+## 🛠️ Configuration
+
+The application requires a Google Gemini API Key to enable AI features. The key is accessed via:
+`process.env.API_KEY`
+
+## 📂 Project Structure
+
+- `App.tsx`: Main application controller and state management.
+- `components/`: UI modules (Dashboard, POS, Inventory, Sidebar).
+- `services/`: API integration logic (Gemini).
+- `types.ts`: TypeScript interfaces for Products, Sales, and AI Insights.
+- `constants.ts`: Mock data and initial configuration.
+
+---
+*Built with precision for the modern vintner.*
